@@ -1,8 +1,7 @@
 # https://github.com/marketplace/actions/go-release-binaries
-name: Release CI
+name: Release Binaries
 
 on:
-  push:
   release:
     types: [created]
 
