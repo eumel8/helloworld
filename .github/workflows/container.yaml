@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Prepare Dockerfile
         run: |
-          sed -i 's/static-app/$REPO_NAME/g' Dockerfile
+          sed -i "s|static-app|$REPO_NAME|g" Dockerfile
           cat Dockerfile
         env:
           REPO_NAME: ${{ github.event.repository.name }}
