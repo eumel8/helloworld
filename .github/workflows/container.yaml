@@ -23,6 +23,7 @@ jobs:
       - name: Prepare Dockerfile
         run: |
           sed -i 's/static-app/$REPO_NAME/g' Dockerfile
+          cat Dockerfile
         env:
           REPO_NAME: ${{ github.event.repository.name }}
       - name: Docker meta
@@ -39,7 +40,7 @@ jobs:
       - name: Install Cosign
         uses: sigstore/cosign-installer@main
         with:
-          cosign-release: "v2.4.0"
+          cosign-release: "v2.5.3"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
