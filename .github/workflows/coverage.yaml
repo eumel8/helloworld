@@ -1,11 +1,11 @@
-name: Build Docker Container (template)
+name: Coverage (template)
 
 on:
+  pull_request:
   push:
     branches:
-      - dev
-    tags:
-      - "*"
+      # It's important that the action also runs on merge to main
+      - main
 
 jobs:
   call-workflow:

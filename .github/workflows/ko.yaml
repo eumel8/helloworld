@@ -1,0 +1,10 @@
+name: Build KO Container (template)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['dev']
+
+jobs:
+  call-workflow:
+    uses: eumel8/workflow-templates/.github/workflows/ko.yaml@0.0.6

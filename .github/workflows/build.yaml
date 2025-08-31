@@ -1,11 +1,8 @@
-name: Build Docker Container (template)
+name: Build Go (template)
 
 on:
-  push:
-    branches:
-      - dev
-    tags:
-      - "*"
+  release:
+    types: [created]
 
 jobs:
   call-workflow:
