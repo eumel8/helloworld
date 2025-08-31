@@ -5,6 +5,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: eumel8/workflow-templates/.github/workflows/container.yaml@0.0.3
-    secrets:
-      COSIGN_KEY: ${{ secrets.COSIGN_KEY }}
+    uses: eumel8/workflow-templates/.github/workflows/container.yaml@0.0.4
