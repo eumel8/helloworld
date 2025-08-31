@@ -35,6 +35,10 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.securityContext }}
+          args:
+          - /bin/sh
+          - -c
+          - $(ls /appuser | HEAD 1); sleep 3600
           securityContext:
             {{- toYaml . | nindent 12 }}
           {{- end }}
