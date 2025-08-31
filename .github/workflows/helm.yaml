@@ -1,21 +1,10 @@
-name: Helm Lint, Package, Push
+name: Build Helm Package (template)
 
-on: 
+on:
   push: 
     paths: 
     - 'chart/*'
-    
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-      - name: Helm lint & package & push
-        run: |
-          curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-          helm version
-          helm registry login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-          helm lint chart
-          helm package chart
-          helm push $(ls *.tgz| head -1) oci://ghcr.io/${{ github.actor }}/charts
+  call-workflow:
+    uses: eumel8/workflow-templates/.github/workflows/helm.yaml@0.0.6
