@@ -2,14 +2,14 @@
 name: Publish Ko
 
 on:
+  workflow_dispatch:
   push:
-    branches: ['main']
+    branches: ['dev']
 
 jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
-    if: ${{ env.KO_BUILD }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
