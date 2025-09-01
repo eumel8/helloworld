@@ -1,4 +1,4 @@
-name: Build Helm Package (template)
+name: End-2-End Test (template)
 
 on:
   push: 
