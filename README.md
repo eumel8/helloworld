@@ -12,3 +12,9 @@ all kind of developement and deployment tasks are covered:
 - End-2-End test of Helm installation of the Go app
 
 See [.github/workflows](.github/workflows) for details.
+
+## Credits
+
+Frank Kloeker f.kloeker@telekom.de
+
+Life is for sharing. If you have an issue with the code or want to improve it, feel free to open an issue or an pull request.
