@@ -9,4 +9,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: eumel8/workflow-templates/.github/workflows/container.yaml@0.0.6
+    uses: eumel8/workflow-templates/.github/workflows/coverage.yaml@0.0.7
