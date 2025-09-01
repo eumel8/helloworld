@@ -2,6 +2,8 @@ name: End-2-End Test (template)
 
 on:
   push: 
+    paths: 
+    - 'chart/*'
 
 jobs:
   call-workflow:
